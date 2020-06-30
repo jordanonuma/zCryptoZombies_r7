@@ -20,4 +20,8 @@ contract ZombieFactory {
         return rand % dnaModulus;
     } //end function _generateRandomDna()
 
+    function createRandomZombie(string memory _name) public {
+        
+    } //end function createRandomZombie()
+
 } //end contract ZombieFactory{}
