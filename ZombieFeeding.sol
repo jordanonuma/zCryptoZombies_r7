@@ -3,4 +3,4 @@ import "./ZombieFactory.sol";
 
 contract ZombieFeeding is ZombieFactory {
     
-} //end contract ZombieFeeding
+} //end contract ZombieFeeding{}
