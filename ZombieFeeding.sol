@@ -3,4 +3,7 @@ import "./ZombieFactory.sol";
 
 contract ZombieFeeding is ZombieFactory {
     
+    function feedAndMulitply(uint _zombieId, uint _targetDna) public {
+    
+    } //end function feedAndMultiply()
 } //end contract ZombieFeeding{}
