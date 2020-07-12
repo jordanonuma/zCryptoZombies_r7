@@ -31,7 +31,7 @@ contract ZombieFeeding is ZombieFactory {
 
     function feedOnKitty(uint _zombieId, uint _kittyId) public {
         uint kittyDna;
-        (,,,,,,,,,kittyDna) = kittyContract.getKitty(_kitty);
+        (,,,,,,,,,kittyDna) = kittyContract.getKitty(_kittyId);
         feedAndMultiply(_zombieId, kittyDna);
     } //end function feedOnKitty()
 } //end contract ZombieFeeding{}
