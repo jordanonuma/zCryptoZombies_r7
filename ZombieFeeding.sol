@@ -28,7 +28,7 @@ contract ZombieFeeding is ZombieFactory {
     } //end function _triggerCooldown()
 
     function _isReady(Zombie storage _zombie) internal view returns(bool) {
-    
+        return (_zombie.readytime <= now);
     } //end function _isReady()
 
     function feedAndMultiply(uint _zombieId, uint _targetDna, string memory _species) public {
