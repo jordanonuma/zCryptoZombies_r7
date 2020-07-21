@@ -43,6 +43,7 @@ contract ZombieFeeding is ZombieFactory {
             newDna = newDna - newDna % 100 + 99;
         } //end if()
         _createZombie("NoName", newDna);
+        _triggerCooldown(myZombie);
     } //end function feedAndMultiply()
 
     function feedOnKitty(uint _zombieId, uint _kittyId) public {
