@@ -11,6 +11,6 @@ contract ZombieAttack is ZombieHelper {
     } //end function randMod
 
     function attack(uint _zombieId, uint _targetId) external ownerOf(_zombieId) {
-    
+        Zombie storage myZombie = zombies[_zombieId];
     } //end function attack()
 } //end contract ZombieAttack{}
