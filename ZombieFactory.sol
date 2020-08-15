@@ -3,6 +3,8 @@ import "./Ownable.sol";
 import "./SafeMath.sol";
 
 contract ZombieFactory is Ownable {
+    using SafeMath for uint256;
+    
     event NewZombie(uint zombieId, string name, uint dna);
 
     uint dnaDigits = 16;
