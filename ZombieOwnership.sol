@@ -2,6 +2,13 @@ pragma solidity >=0.5.0 <0.6.0;
 import "./ZombieAttack.sol";
 import "./ERC721.sol";
 
+//@title - contract managing zombie ownership
+//@author - human
+//@dev - compliant with OpenZeppelin's implementation of the ERC721
+//@param _owner - token owner
+//@param _tokenId - unique ID of token
+//@return _address or _tokenId - returns owner or the token owner owns
+
 contract ZombieOwnership is ZombieAttack, ERC721 {
 
     mapping (uint => address) zombieApprovals;
