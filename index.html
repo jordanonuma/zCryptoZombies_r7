@@ -13,7 +13,7 @@
         var cryptoZombies;
         function startApp() {
             var cryptoZombiesAddress = "YOUR_CONTRACT_ADDRESS";
-            var cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
+            cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
         } //end function startApp()
 
         window.addEventListener('load', function() {
