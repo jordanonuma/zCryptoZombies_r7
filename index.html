@@ -20,7 +20,7 @@
                 if (web3.eth.accounts[0] !== userAccount) {
                     userAccount = web3.eth.accounts[0];
                     cryptoZombies.methods.getZombiesByOwner(userAccount).call() //revised part of setInterval()
-                } //end if()
+                } .then(displayZombies); //end if()
             }, 100); //end setInterval()
         } //end function startApp()
 
