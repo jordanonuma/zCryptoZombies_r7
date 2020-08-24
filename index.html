@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="zombies"></div>
-    
+
     <script>
         var cryptoZombies;
         var userAccount;
@@ -24,6 +24,10 @@
                 } //end if()    
             }, 100); //end setInterval()
         } //end function startApp()
+
+        function displayZombies(ids) {
+        
+        } //end function displayZombies()
 
         function getZombieDetails(id) {
             return cryptoZombies.methods.zombies(id).call()
