@@ -69,7 +69,7 @@
             // the transaction has been sent
             $("#txStatus").text("Eating a kitty. This may take a while...");
             // Send the tx to our contract:
-            return cryptoZombies.methods.createRandomZombie(name)
+            return cryptoZombies.methods.feedOnKitty(zombieId, kittyId)
             .send({ from: userAccount })
             .on("receipt", function(receipt) {
             $("#txStatus").text("Successfully created " + name + "!");
