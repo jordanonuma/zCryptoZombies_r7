@@ -27,8 +27,10 @@
             cryptoZombies.events.Transfer({filter: { _to: userAccount } })
                 .on("data", function(event) {
                     let data = event.returnValues;
-                // User just received a zombie!
-                // Do something here to update UI
+                    
+                    // User just received a zombie!
+                    // Do something here to update UI
+                    getZombiesByOwner(userAccount).then(displayZombies);    
                 }) //end .on("data")
                 .on("error", console.error); //end .on("error")
         } //end function startApp()
