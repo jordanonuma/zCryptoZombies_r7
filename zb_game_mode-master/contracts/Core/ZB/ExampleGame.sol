@@ -4,7 +4,7 @@ import "./ZB/ZBGameMode.sol";
 
 contract ExampleGame is ZBGameMode  {
 
-    mapping (stirng => bool) internal bannedCards;
+    mapping (string => bool) internal bannedCards;
 
     constructor() public {
         
