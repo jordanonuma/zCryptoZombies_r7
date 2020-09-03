@@ -52,7 +52,7 @@ contract ExampleGame is ZBGameMode  {
         changes.changePlayerMaxGooVials(Player.Player2, 8);
 
         for (uint i=0; i < gameState.playerStates.length; i++) {
-            
+            CardInstance[] memory newCards = new CardInstance[](gameState.playerStates[i].cardsInDeck.length);
         } //end for()
     } //end function beforeMatchStart()
 
