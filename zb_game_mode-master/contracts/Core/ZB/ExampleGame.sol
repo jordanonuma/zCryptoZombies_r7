@@ -56,7 +56,9 @@ contract ExampleGame is ZBGameMode  {
             uint cardCount = 0;
 
             for (uint j = 0; j < gameState.playerStates[i].cardsInDeck.length; j++) {
-                
+                if(isLegalCard(gameState.playerStates[i].cardsInDeck[j])) {
+                    
+                } //end if()
             } //end for(j)
         } //end for(i)
     } //end function beforeMatchStart()
