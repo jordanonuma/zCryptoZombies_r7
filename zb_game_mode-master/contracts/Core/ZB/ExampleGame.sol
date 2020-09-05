@@ -64,4 +64,8 @@ contract ExampleGame is ZBGameMode  {
         } //end for(i)
     } //end function beforeMatchStart()
 
+    function isLegalCard(CardInstance card) internal view returns(bool) {
+        
+    } //end function isLegalCard()
+
 } //end contract ExampleGame{}
