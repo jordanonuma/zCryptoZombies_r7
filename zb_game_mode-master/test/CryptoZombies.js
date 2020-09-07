@@ -1,6 +1,6 @@
 const CryptoZombies = artifacts.require("CryptoZombies");
 
-contract("MyAwesomeContract", (accounts) => {
+contract("CryptoZombies", (accounts) => {
     it("should be able to receive Ethers", () => {
         
     })
