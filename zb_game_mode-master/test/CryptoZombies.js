@@ -22,15 +22,15 @@ contract("CryptoZombies", (accounts) => {
     context("with the single-step transfer scenario", async() => {
         it("should transfer a  zombie", async() => {
             
-        })
+        }) //end it()
     }) //end context()
 
     context("with the two-step transfer scenario", async() => {
         it("should approve and then transfer a zombie when the approved address calls transferFrom", async () => {
 
-        })
+        }) //end it()
         it("should approve and then transfer a zombie when the owner calls transferFrom", async () => {
             
-        })
+        }) //end it()
     }) //end context()
 }) //end contract("", ()=>{})
