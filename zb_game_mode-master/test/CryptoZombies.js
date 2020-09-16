@@ -24,6 +24,7 @@ contract("CryptoZombies", (accounts) => {
             await contractInstance.createRandomZombie(zombieNames[0], {from: alice});
             const zombieId = await contractInstance.createRandomZombie(zombieNames[0]);
             await contractInstance.transferFrom(alice, bob, zombieId);
+            const newOwner = contractInstance.ownerOf(zombieId);
         }) //end it()
     }) //end context()
 
