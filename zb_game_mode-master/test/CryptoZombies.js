@@ -23,8 +23,8 @@ contract("CryptoZombies", (accounts) => {
         it("should transfer a  zombie", async() => {
             const result = await contractInstance.createRandomZombie(zombieNames[0], {from: alice});
             const zombieId = result.logs[0].args.zombieId.toNumber();
-            await contractInstance.transferFrom(alice, bob, zombieId);
-            const newOwner = contractInstance.ownerOf(zombieId);
+            await contractInstance.transferFrom(alice, bob, zombieId, {from: alice});
+            const newOwner = await contractInstance.ownerOf(zombieId);
             assert.equal(newOwner, bob);
         }) //end it()
     }) //end context()
