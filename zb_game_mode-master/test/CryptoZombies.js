@@ -48,7 +48,7 @@ contract("CryptoZombies", (accounts) => {
             await contractInstance.approve(bob, zombieId, {from: alice});
             await contractInstance.transferFrom(alice, bob, zombieId, {from: alice});
             const newOwner = await contractInstance.ownerOf(zombieId);
-            assert.equal(newOwner, bob);
+            expect(newOwner).to.equal(bob); //replaces assert.equal(newOwner, bob);
         }) //end it()
     }) //end context()
 
@@ -61,7 +61,7 @@ contract("CryptoZombies", (accounts) => {
         
         await time.increase(time.duration.days(1)); //simulates a day has passed so we don't actually have to wait 24 hours to test second section
         await contractInstance.attack(firstZombieId, secondZombieId, {from: alice});
-        assert.equal(result.receipt.status, true);
+        expect(result.receipt.status).to.equal(true); //replaces assert.equal(result.receipt.status, true);
     }) //end it()
 
 }) //end contract("", ()=>{})
