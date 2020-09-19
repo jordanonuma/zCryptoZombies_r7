@@ -50,4 +50,17 @@ contract("CryptoZombies", (accounts) => {
             assert.equal(newOwner, bob);
         }) //end it()
     }) //end context()
+
+    it("zombies should be able to attack another zombie", async () => {
+        let result;
+        result = await contractInstance.createRandomZombie(zombieNames[0], {from: alice});
+        const firstZombieId = result.logs[0].args.zombieId.toNumber();
+        result = await contractInstance.createRandomZombie(zombieNames[1], {from: bob});
+        const secondZombieId = result.logs[0].args.zombieId.toNumber();
+        
+        await time.increase(time.duration.days(1)); //simulates a day has passed so we don't actually have to wait 24 hours to test second section
+        await contractInstance.attack(firstZombieId, secondZombieId, {from: alice});
+        assert.equal(result.receipt.status, true);
+    }) //end it()
+
 }) //end contract("", ()=>{})
