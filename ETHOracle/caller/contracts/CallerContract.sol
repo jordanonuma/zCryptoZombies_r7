@@ -20,4 +20,8 @@ contract CallerContract is Ownable {
         myRequests[id] = true;
         emit ReceivedNewRequestIdEvent(id);
     } //end function updateEthPrice()
+
+    function callback(uint256 _ethPrice, uint256 _id) public {
+        
+    } //end function callback()
 } //end contract CallerContract{}
