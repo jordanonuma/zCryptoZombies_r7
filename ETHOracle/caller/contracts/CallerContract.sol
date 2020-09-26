@@ -2,6 +2,8 @@ pragma solidity 0.5.0;
 import "../oracle/contracts/EthPriceOracle.sol";
 import "../../Ownable.sol";
 contract CallerContract is Ownable {
+    uint256 ethPrice private;
+    
     EthPriceOracle private oracleInstance;
     address private oracleAddress;
     mapping(uint256=>bool) myRequests;
