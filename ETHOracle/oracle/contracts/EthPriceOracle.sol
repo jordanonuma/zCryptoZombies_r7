@@ -10,4 +10,8 @@ contract EthPriceOracle {
     mapping(uint256=>bool) pendingRequests;
     event GetLatestEthPriceEvent(address callerAddress, uint id);
     event SetLatestEthPriceEvent(uint256 ethPrice, address callerAddress);
+
+    function getLatestEthPrice() public returns(uint256) {
+      
+    } //end function getLatestEthPrice()
 } //end contract EthPriceOracle{}
