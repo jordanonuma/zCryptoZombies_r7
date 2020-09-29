@@ -12,6 +12,6 @@ contract EthPriceOracle {
     event SetLatestEthPriceEvent(uint256 ethPrice, address callerAddress);
 
     function getLatestEthPrice() public returns(uint256) {
-      
+        randNonce++;
     } //end function getLatestEthPrice()
 } //end contract EthPriceOracle{}
