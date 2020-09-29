@@ -13,5 +13,6 @@ contract EthPriceOracle {
 
     function getLatestEthPrice() public returns(uint256) {
         randNonce++;
+        uint id = uint(keccak256(abi.encodePacked(now, msg.sender, randNonce))) % modulus;
     } //end function getLatestEthPrice()
 } //end contract EthPriceOracle{}
