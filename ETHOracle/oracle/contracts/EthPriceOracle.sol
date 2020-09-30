@@ -15,5 +15,6 @@ contract EthPriceOracle {
         randNonce++;
         uint id = uint(keccak256(abi.encodePacked(now, msg.sender, randNonce))) % modulus;
         pendingRequests[id] = true;
+        emit GetLatestEthPriceEvent(msg.sender, id);
     } //end function getLatestEthPrice()
 } //end contract EthPriceOracle{}
