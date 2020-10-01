@@ -21,5 +21,6 @@ contract EthPriceOracle {
 
     function setLatestEthPrice(uint256 _ethPrice, address callerAddress, uint256 id) public {
         require(pendingRequests[_id] == true, "This request is not in my pending list.");
+        delete pendingRequests[_id];
     } //end function setLatestEthPrice()
 } //end contract EthPriceOracle{}
