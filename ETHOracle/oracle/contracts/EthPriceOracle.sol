@@ -18,4 +18,8 @@ contract EthPriceOracle {
         emit GetLatestEthPriceEvent(msg.sender, id);
         return id;
     } //end function getLatestEthPrice()
+
+    function setLatestEthPrice(uint256 _ethPrice, address callerAddress, uint256 id) public {
+      
+    } //end function setLatestEthPrice()
 } //end contract EthPriceOracle{}
