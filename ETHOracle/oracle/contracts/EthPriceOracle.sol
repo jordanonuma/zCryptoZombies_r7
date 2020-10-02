@@ -24,5 +24,6 @@ contract EthPriceOracle {
         delete pendingRequests[_id];
 
         CallerContractInterface callerContractInstance;
+        callerContractInstance = CallerContractInterface(_callerAddress);
     } //end function setLatestEthPrice()
 } //end contract EthPriceOracle{}
