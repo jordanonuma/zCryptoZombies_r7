@@ -25,10 +25,9 @@ async function filterEvents(oracleContract, web3js) {
         } //end function addRequestToQueue()
     }) //end filtering for Event()
 
-    EthPriceOracle.events.SetLatestEthPrice(async (err, event) => {
+    oracleContract.events.SetLatestEthPriceEvent(async (err, event) => {
         if (err) {
           console.error('Error on event', err)
-          return
         }
     
     }) //end filtering for Event()
