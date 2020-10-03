@@ -20,7 +20,7 @@ async function filterEvents(oracleContract, web3js) {
           return
         }
         
-        async function addRequestToQueue(await event) {
+        await addRequestToQueue(event) {
 
         } //end function addRequestToQueue()
     }) //end filtering for Event()
