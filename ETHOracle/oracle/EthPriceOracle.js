@@ -19,6 +19,9 @@ async function filterEvents(oracleContract, web3js) {
           console.error('Error on event', err)
           return
         }
-        // Do something
+        
+        async function addRequestToQueue(await event) {
+
+        } //end function addRequestToQueue()
     }) //end EventName()
 } //end async function filterEvents()
