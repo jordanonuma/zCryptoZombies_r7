@@ -14,7 +14,7 @@ async function getOracleContract(web3js) {
 } //end async function getOracleContract()
 
 async function filterEvents(oracleContract, web3js) {
-    myContract.events.EventName(async (err, event) => {
+    EthPriceOracle.events.getLatestEthPrice(async (err, event) => {
         if (err) {
           console.error('Error on event', err)
           return
