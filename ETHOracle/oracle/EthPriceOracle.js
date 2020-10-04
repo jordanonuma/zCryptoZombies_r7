@@ -34,5 +34,6 @@ async function filterEvents(oracleContract, web3js) {
 } //end async function filterEvents()
 
 async function addRequestToQueue(event) {
-    
+    const callerAddress = event.returnvalues.callerAddress
+    const id = event.returnvalues.id
 } //end async function addRequestToQueue()
