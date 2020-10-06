@@ -40,5 +40,5 @@ async function addRequestToQueue(event) {
 } //end async function addRequestToQueue()
 
 async function processQueue (oracleContract, ownerAddress) {
-
+    let processedRequests = 0
 } //end async function processQueue()
