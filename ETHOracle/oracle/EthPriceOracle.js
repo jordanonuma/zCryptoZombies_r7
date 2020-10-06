@@ -38,3 +38,7 @@ async function addRequestToQueue(event) {
     const id = event.returnValues.id
     pendingRequests.push({callerAddress, id})
 } //end async function addRequestToQueue()
+
+async function processQueue (oracleContract, ownerAddress) {
+
+} //end async function processQueue()
