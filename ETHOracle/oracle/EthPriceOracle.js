@@ -49,5 +49,5 @@ async function processQueue (oracleContract, ownerAddress) {
 } //end async function processQueue()
 
 async function processRequest (oracleContract, ownerAddress, id, callerAddress) {
-    
+    let retries = 0
 } //end function processRequest()
