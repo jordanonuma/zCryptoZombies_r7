@@ -58,7 +58,9 @@ async function processRequest (oracleContract, ownerAddress, id, callerAddress) 
         } catch (error) {
             if (retries == MAX_RETRIES - 1) {
                 await setLatestEthPrice(oracleContract, callerAddress, ownerAddress, 0, id)
+                return
             } //end if()
+            retries++
         } //end try-catch()
     } //end while()
 } //end function processRequest()
