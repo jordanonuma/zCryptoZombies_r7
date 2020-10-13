@@ -101,7 +101,7 @@ async function setLatestEthPrice (oracleContract, callerAddress, ownerAddress, e
     const { oracleContract, ownerAddress, client } = await init()
     process.on( 'SIGINT', () => {
       console.log('Calling client.disconnect()')
-      // 1. Execute client.disconnect
+      client.disconnect()
       process.exit( )
     })
     setInterval(async () => {
