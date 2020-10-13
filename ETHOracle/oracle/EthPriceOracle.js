@@ -105,6 +105,6 @@ async function setLatestEthPrice (oracleContract, callerAddress, ownerAddress, e
       process.exit( )
     })
     setInterval(async () => {
-      // 2. Run processQueue
+        await processQueue(oracleContract, ownerAddress)
     }, SLEEP_INTERVAL)
   })()
