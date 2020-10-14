@@ -48,7 +48,7 @@ async function getCallerContract (web3js) {
     const oracleAddress =  OracleJSON.networks[networkId].address
     await callerContract.methods.setOracleInstanceAddress(oracleAddress).send({ from: ownerAddress })
     setInterval( async () => {
-        await callerContract.methods.updateEthPrice().send(from:ownerAddress)
+        await callerContract.methods.updateEthPrice().send({from:ownerAddress})
     }, SLEEP_INTERVAL);
   })()
   
