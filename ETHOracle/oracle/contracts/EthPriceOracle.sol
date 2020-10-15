@@ -1,5 +1,5 @@
 pragma solidity 0.5.0;
-import "../../../Ownable.sol";
+//import "../../../Ownable.sol";
 import "../access/Roles.sol";
 import "./CallerContractInterface.sol";
 //import "../../../SafeMath.sol";
