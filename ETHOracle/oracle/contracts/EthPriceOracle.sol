@@ -7,7 +7,7 @@ import "./CallerContractInterface.sol";
 contract EthPriceOracle { 
   using Roles for Roles.Role;
   Roles.Role private owners;
-  private Roles.add(oracles);
+  Roles.Role private oracles;
 
   uint private randNonce = 0;
   uint private modulus = 1000;
