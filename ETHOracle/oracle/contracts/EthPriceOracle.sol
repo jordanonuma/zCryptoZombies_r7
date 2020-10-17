@@ -20,6 +20,10 @@ contract EthPriceOracle {
       owners.add(_owner);
   } //end constructor()
 
+  function addOracle(address _oracle) public {
+
+  } //end function addOracle()
+
   function getLatestEthPrice() public returns (uint256) {
     randNonce++;
     uint id = uint(keccak256(abi.encodePacked(now, msg.sender, randNonce))) % modulus;
