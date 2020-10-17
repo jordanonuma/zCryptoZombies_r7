@@ -17,7 +17,7 @@ contract EthPriceOracle {
 
   constructor (address _owner) public {
     
-  } //end constructor{}
+  } //end constructor()
 
   function getLatestEthPrice() public returns (uint256) {
     randNonce++;
