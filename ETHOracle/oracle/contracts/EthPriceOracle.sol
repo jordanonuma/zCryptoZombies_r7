@@ -21,7 +21,7 @@ contract EthPriceOracle {
   } //end constructor()
 
   function addOracle(address _oracle) public {
-
+      require(owners.has(msg.sender), "Not an owner!");
   } //end function addOracle()
 
   function getLatestEthPrice() public returns (uint256) {
