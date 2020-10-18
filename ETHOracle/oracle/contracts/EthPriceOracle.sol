@@ -24,6 +24,7 @@ contract EthPriceOracle {
       require(owners.has(msg.sender), "Not an owner!");
       require(!oracles.has(_oracle), "Already an oracle!");
       oracle.add(_oracle);
+      emit AddOracleEvent(_oracle);
   } //end function addOracle()
 
   function getLatestEthPrice() public returns (uint256) {
