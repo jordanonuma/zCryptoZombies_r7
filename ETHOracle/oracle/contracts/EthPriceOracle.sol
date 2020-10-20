@@ -34,8 +34,8 @@ contract EthPriceOracle {
     function removeOracle(address _oracle) public {
         require(owners.has(msg.sender), "Not an owner!");
         require(oracles.has(_oracle), "Not an oracle!");
-        require(numOracle > 1, "Do not remove the last oracle!");
-        oracle.remove(_oracle);
+        require(numOracles > 1, "Do not remove the last oracle!");
+        oracles.remove(_oracle);
         numOracles--;
         emit RemoveOracleEvent(_oracle);
     } //end function removeOracle()
