@@ -35,6 +35,7 @@ contract EthPriceOracle {
         require(oracles.has(_oracle), "Not an oracle!");
         require(numOracle > 1, "Do not remove the last oracle!");
         oracle.remove(_oracle);
+        numOracles--;
     } //end function removeOracle()
 
     function getLatestEthPrice() public returns (uint256) {
