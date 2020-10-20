@@ -27,6 +27,12 @@ contract EthPriceOracle {
       emit AddOracleEvent(_oracle);
   } //end function addOracle()
 
+    function removeOracle(address _oracle) public {
+        require(owners.has(msg.sender), "Not an owner!");
+        require(oracles.has(_oracle), "Not an oracle!");
+    
+    } //end function removeOracle()
+
   function getLatestEthPrice() public returns (uint256) {
     randNonce++;
     uint id = uint(keccak256(abi.encodePacked(now, msg.sender, randNonce))) % modulus;
