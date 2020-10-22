@@ -64,6 +64,8 @@ contract EthPriceOracle {
         resp = Response(msg.sender, _callerAddress, _ethPrice);
         requestIdToResponse[_id].push(resp);
 
+        var numResponses = requestIdToReponse[_id].length;
+        
         delete pendingRequests[_id];
         CallerContracInterface callerContractInstance;
         callerContractInstance = CallerContracInterface(_callerAddress);
