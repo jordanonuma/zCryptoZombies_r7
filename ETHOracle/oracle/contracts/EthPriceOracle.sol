@@ -12,6 +12,7 @@ contract EthPriceOracle {
     uint private randNonce = 0;
     uint private modulus = 1000;
     uint private numOracles = 0;
+    uint private THRESHOLD = 0;
 
     mapping(uint256=>bool) pendingRequests;
     mapping (uint256=>Response[]) public requestIdToResponse;
