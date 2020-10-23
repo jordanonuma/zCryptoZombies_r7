@@ -68,11 +68,11 @@ contract EthPriceOracle {
 
         if (numResponse >= THRESHOLD) {
             uint computedEthPrice = 0;
-            for (uint f=0; f< requestedIdToResponse[_id].length; f++) {
+            for (uint f=0; f< requestIdToResponse[_id].length; f++) {
                 computedEthPrice += requestIdToResponse[_id][f].ethPrice;
             } //end for(f)
             computedEthPrice = computedEthPrice / numResponses;
-            
+
             CallerContractInterface callerContractInstance;
             callerContractInstance = CallerContracInterface(_callerAddress);
             callerContractInstance.callback(_ethPrice, _id);
