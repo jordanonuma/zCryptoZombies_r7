@@ -77,8 +77,8 @@ contract EthPriceOracle {
 
             CallerContractInterface callerContractInstance;
             callerContractInstance = CallerContracInterface(_callerAddress);
-            callerContractInstance.callback(_ethPrice, _id);
-            emit SetLatestEthPriceEvent(_ethPrice, _callerAddress);
+            callerContractInstance.callback(computedEthPrice, _id);
+            emit SetLatestEthPriceEvent(computedEthPrice, _callerAddress);
             delete pendingRequests[_id];
         } //end if()
 
