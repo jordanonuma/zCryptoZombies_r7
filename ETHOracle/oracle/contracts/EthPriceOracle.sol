@@ -6,6 +6,8 @@ import "../../../SafeMath.sol";
 
 contract EthPriceOracle { 
     using Roles for Roles.Role;
+    using SafeMath for uint256;
+    
     Roles.Role private owners;
     Roles.Role private oracles;
 
