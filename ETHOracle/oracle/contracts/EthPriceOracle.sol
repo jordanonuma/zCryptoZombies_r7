@@ -73,7 +73,7 @@ contract EthPriceOracle {
             for (uint f=0; f< requestIdToResponse[_id].length; f++) {
                 computedEthPrice =  computedEthPrice.add(requestIdToResponse[_id][f].ethPrice);
             } //end for(f)
-            computedEthPrice = computedEthPrice / numResponses;
+            computedEthPrice = computedEthPrice.div(numResponses);
 
             CallerContractInterface callerContractInstance;
             callerContractInstance = CallerContracInterface(_callerAddress);
