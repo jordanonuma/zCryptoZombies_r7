@@ -7,7 +7,7 @@ import "../../../SafeMath.sol";
 contract EthPriceOracle { 
     using Roles for Roles.Role;
     using SafeMath for uint256;
-    
+
     Roles.Role private owners;
     Roles.Role private oracles;
 
@@ -71,7 +71,7 @@ contract EthPriceOracle {
         if (numResponse >= THRESHOLD) {
             uint computedEthPrice = 0;
             for (uint f=0; f< requestIdToResponse[_id].length; f++) {
-                computedEthPrice += requestIdToResponse[_id][f].ethPrice;
+                computedEthPrice =  computedEthPrice.add(requestIdToResponse[_id][f].ethPrice);
             } //end for(f)
             computedEthPrice = computedEthPrice / numResponses;
 
