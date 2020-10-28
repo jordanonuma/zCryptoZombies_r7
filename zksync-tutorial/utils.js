@@ -10,5 +10,5 @@ async function getZkSyncProvider (zksync, networkName) {
 } //end async function getZkSyncProvider()
 
 async function initAccount (rinkebyWallet, zkSyncProvider, zksync) {
-    
+    const zkSyncWallet = await zksync.Wallet.fromEthSigner(rinkebyWallet, zkSyncProvider)
 } //end async function initAccount()
