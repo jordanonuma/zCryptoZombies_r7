@@ -8,3 +8,7 @@ async function getZkSyncProvider (zksync, networkName) {
     }
     return zkSyncProvider
 } //end async function getZkSyncProvider()
+
+async function initAccount (rinkebyWallet, zkSyncProvider, zksync) {
+    
+} //end async function initAccount()
