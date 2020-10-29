@@ -25,3 +25,9 @@ async function initAccount (rinkebyWallet, zkSyncProvider, zksync) {
     const zkSyncWallet = await zksync.Wallet.fromEthSigner(rinkebyWallet, zkSyncProvider)
     return zkSyncWallet
 } //end async function initAccount()
+
+async function registerAccount (wallet) {
+    console.log(`Registering the ${wallet.address()} account on zkSync`)
+    // Start here
+
+} //end async function registerAccount()
