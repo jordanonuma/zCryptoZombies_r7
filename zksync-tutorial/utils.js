@@ -15,7 +15,7 @@ async function getEthereumProvider (ethers, networkName) {
       // eslint-disable-next-line new-cap
       ethersProvider = new ethers.getDefaultProvider(networkName)
     } catch (error) {
-      console.log('Could not connect to Ethereum')
+      console.log('Could not connect to Rinkeby')
       console.log(error)
     }
     return ethersProvider
