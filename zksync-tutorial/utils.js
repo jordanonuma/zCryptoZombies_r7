@@ -31,6 +31,9 @@ async function registerAccount (wallet) {
     
     if (!await wallet.isSigningKeySet()) {
         // Your signing keys have not been set. You'll place the logic for setting it here.
+        if (await wallet.getAccountId() === undefined) {
+            throw new Error('Unknown account')
+        } //end if()
     } //end if()
 
 } //end async function registerAccount()
