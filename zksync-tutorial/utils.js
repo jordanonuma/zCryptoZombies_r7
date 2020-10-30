@@ -39,3 +39,7 @@ async function registerAccount (wallet) {
     } //end if()
 
 } //end async function registerAccount()
+
+async function depositToZkSync (zkSyncWallet, token, amountToDeposit, ethers) {
+    
+} //end async function depositToZkSync()
