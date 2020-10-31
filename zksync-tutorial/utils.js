@@ -68,3 +68,7 @@ async function transfer (from, toAddress, amountToTransfer, transferFee, token, 
     console.log('Got transfer receipt.')
     console.log(transferReceipt)
 } //end async function transfer()
+
+async function getFee (transactionType, address, token, zkSyncProvider, ethers) {
+    
+} //end async function getFee()
