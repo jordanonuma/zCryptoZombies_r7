@@ -62,4 +62,6 @@ async function transfer (from, toAddress, amountToTransfer, transferFee, token, 
       
     }) //end syncTransfer({})
     const transferReceipt = await transfer.awaitReceipt()
+    console.log('Got transfer receipt.')
+    console.log(transferReceipt)
 } //end async function transfer()
