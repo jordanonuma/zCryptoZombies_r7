@@ -61,4 +61,5 @@ async function transfer (from, toAddress, amountToTransfer, transferFee, token, 
     const transfer = await wallet.syncTransfer({
       
     }) //end syncTransfer({})
+    const transferReceipt = await transfer.awaitReceipt()
 } //end async function transfer()
