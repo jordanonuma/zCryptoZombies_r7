@@ -70,5 +70,5 @@ async function transfer (from, toAddress, amountToTransfer, transferFee, token, 
 } //end async function transfer()
 
 async function getFee (transactionType, address, token, zkSyncProvider, ethers) {
-    
+    const feeInWei = await zkSyncProvider,getTransactionFee(transactionType, address, Token)
 } //end async function getFee()
