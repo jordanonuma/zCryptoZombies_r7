@@ -83,7 +83,7 @@ async function withdrawToEthereum (wallet, amountToWithdraw, withdrawalFee, toke
         token: token,
         amount: closestPackableAmount,
         fee: closestPackableFee
-    })
+    }) //end withdrawFromSyncToEthereum()
     await withdraw.awaitVerifyReceipt() 
 
     console.log('ZKP verification is complete')
