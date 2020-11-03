@@ -90,5 +90,5 @@ async function withdrawToEthereum (wallet, amountToWithdraw, withdrawalFee, toke
 } //end async function withdrawToEthereum()
 
 async function displayZkSyncBalance(wallet, ethers) {
-    
+    const state = await wallet.getAccountState()
 } //end async function displayZkSyncBalance()
