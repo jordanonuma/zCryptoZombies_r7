@@ -103,6 +103,6 @@ async function displayZkSyncBalance(wallet, ethers) {
     if (state.verified.balances.ETH) {
         console.log(`Commited ETH balance for ${wallet.address()}: ${ethers.utils.formatEther(state.verified.balances.ETH)}`)
     } else {
-      
+        console.log(`Verified ETH balance for ${wallet.address()}: 0`)
     } //end if{}-else{}
 } //end async function displayZkSyncBalance()
