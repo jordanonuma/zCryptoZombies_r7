@@ -4,4 +4,4 @@
     const utils = require('./utils')
   
     const zkSyncProvider = await utils.getZkSyncProvider(zksync, process.env.NETWORK_NAME)
-  })()
+})() //end async()
