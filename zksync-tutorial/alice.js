@@ -22,6 +22,7 @@
     
     async function utils.depositToZkSync(aliceZkSyncWallet, token, amountToDeposit, ethers) {
         await utils.displayZkSyncBalanc(aliceZkSyncWallet, ethers)
+        await utils.registerAccount(aliceZkSyncWallet)
     } //end async utils.depositToZkSync()
   
   })()
