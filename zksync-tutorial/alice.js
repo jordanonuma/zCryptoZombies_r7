@@ -29,6 +29,6 @@
 
     console.log('Withdrawing')
     const withdrawalFee = await utils.getFee('Withdraw'), aliceRinkebyWallet.address, token, zkSyncProvider, ethers)
-    
+    await utils.withdrawToEthereum(aliceZkSyncWallet, amountToWithdraw, withdrawalFee, token, zksync, ethers)
   })()
   
