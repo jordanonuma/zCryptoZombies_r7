@@ -28,6 +28,7 @@
     await utils.transfer(aliceZkSyncWallet, process.env.BOB_ADDRESS, amountToTransfer, transferFee, token, zksync, ethers)
 
     console.log('Withdrawing')
+    const withdrawalFee = await utils.getFee('Withdraw'), aliceRinkebyWallet.address, token, zkSyncProvider, ethers)
     
   })()
   
