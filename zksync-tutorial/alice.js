@@ -11,13 +11,12 @@
     const ethersProvider = await utils.getEthereumProvider(ethers, process.env.NETWORK_NAME)
     console.log('Creating a new Rinkeby wallet for Alice')
     const aliceRinkebyWallet = new ethers.Wallet(process.env.ALICE_PRIVATE_KEY, ethersProvider) // Account #78
-    console.log(`Alice's Rinkeby address is: ${aliceRinkebyWallet.address}`)
-    //const aliceInitialRinkebyBalance = await aliceRinkebyWallet.getBalance()
-    
+    console.log(`Alice's Rinkeby address is: ${aliceRinkebyWallet.address}`)    
   
     console.log('Creating a zkSync wallet for Alice')
     const aliceZkSyncWallet = await utils.initAccount(aliceRinkebyWallet, zkSyncProvider, zksync)
   
+    //displays Alice's balance
     const tokenSet = zkSyncProvider.tokenSet
     const aliceInitialRinkebyBalance = await aliceZkSyncWallet.getEthereumBalance(token)
     console.log(`Alice's initial balance on Rinkeby is: ${tokenSet.formatToken(token, aliceInitialRinkebyBalance)}`) 
