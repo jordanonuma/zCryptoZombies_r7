@@ -13,13 +13,13 @@
     const aliceRinkebyWallet = new ethers.Wallet(process.env.ALICE_PRIVATE_KEY, ethersProvider) // Account #78
     console.log(`Alice's Rinkeby address is: ${aliceRinkebyWallet.address}`)
     //const aliceInitialRinkebyBalance = await aliceRinkebyWallet.getBalance()
-    console.log(`Alice's initial balance on Rinkeby is: ${ethers.utils.formatEther(aliceInitialRinkebyBalance)}`)
+    //console.log(`Alice's initial balance on Rinkeby is: ${ethers.utils.formatEther(aliceInitialRinkebyBalance)}`)
   
     console.log('Creating a zkSync wallet for Alice')
     const aliceZkSyncWallet = await utils.initAccount(aliceRinkebyWallet, zkSyncProvider, zksync)
   
     const tokenSet = zkSyncProvider.tokenSet
-    
+
     console.log('Depositing')
     await utils.depositToZkSync(aliceZkSyncWallet, token, amountToDeposit, ethers) 
     await utils.displayZkSyncBalance(aliceZkSyncWallet, ethers)
