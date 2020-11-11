@@ -2,7 +2,7 @@
     const ethers = require('ethers')
     const zksync = require('zksync')
     const utils = require('./utils')
-    const token = 'ETH'
+    const token = 'USDT' //previously ETH
     const amountToDeposit = '0.05'
     const amountToTransfer = '0.02'
     const amountToWithdraw = '0.002'
