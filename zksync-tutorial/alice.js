@@ -24,7 +24,7 @@
     await aliceZkSyncWallet.approveERC20TokenDeposits(token)
 
     console.log('Depositing')
-    await utils.depositToZkSync(aliceZkSyncWallet, token, amountToDeposit, ethers) 
+    await utils.depositToZkSync(aliceZkSyncWallet, token, amountToDeposit, tokenSet) 
     await utils.displayZkSyncBalance(aliceZkSyncWallet, ethers)
     await utils.registerAccount(aliceZkSyncWallet)
     
