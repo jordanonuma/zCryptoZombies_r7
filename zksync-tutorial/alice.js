@@ -30,7 +30,7 @@
     
     console.log('Transferring')
     const transferFee = await utils.getFee('Transfer' or 'Withdraw', aliceRinkebyWallet.address, token, zkSyncProvider, tokenSet)
-    await utils.transfer(aliceZkSyncWallet, process.env.BOB_ADDRESS, amountToTransfer, transferFee, token, zksync, ethers)
+    await utils.transfer(aliceZkSyncWallet, process.env.BOB_ADDRESS, amountToTransfer, transferFee, token, zksync, tokenSet)
 
     console.log('Withdrawing')
     const withdrawalFee = await utils.getFee('Withdraw', aliceRinkebyWallet.address, token, zkSyncProvider, ethers)
