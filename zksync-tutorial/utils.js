@@ -91,6 +91,7 @@ async function withdrawToEthereum (wallet, amountToWithdraw, withdrawalFee, toke
 
 async function displayZkSyncBalance(wallet, tokenSet) {
     const state = await wallet.getAccountState()
+    const committedBalances = state.committed.balances
 
     //checks for committed balances
     if (state.committed.balances.ETH) {
