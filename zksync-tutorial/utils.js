@@ -89,7 +89,7 @@ async function withdrawToEthereum (wallet, amountToWithdraw, withdrawalFee, toke
     console.log('ZKP verification is complete')
 } //end async function withdrawToEthereum()
 
-async function displayZkSyncBalance(wallet, ethers) {
+async function displayZkSyncBalance(wallet, tokenSet) {
     const state = await wallet.getAccountState()
 
     //checks for committed balances
