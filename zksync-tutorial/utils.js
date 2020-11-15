@@ -98,6 +98,10 @@ async function displayZkSyncBalance(wallet, tokenSet) {
         console.log(`Committed ${property} balance for ${wallet.address()}: ${tokenSet.formatToken(property, committedBalances[property])}`)
     } //end for()
 
+    for (const property in verifiedBalances) {
+    
+    } //end for()
+
     //checks for committed balances
     if (state.committed.balances.ETH) {
         console.log(`Commited ETH balance for ${wallet.address()}: ${ethers.utils.formatEther(state.committed.balances.ETH)}`)
